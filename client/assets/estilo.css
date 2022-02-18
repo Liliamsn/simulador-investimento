@@ -1,0 +1,523 @@
+:root {
+    --cinza-claro: #EFEFEF;
+    --preto: #000;
+    --branco: #FFF;
+    --laranja: #ED8E53;
+    --cinza-escuro: #969696;
+    --branco-gelo: #F4F4F4;
+    --cinza-medio: #DEDEDE;
+    --verde: #48A539;
+    --vermelho: #F00;
+}
+
+.conteudo {
+    position: relative;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    position: relative;
+    background-color: var(--cinza-claro);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.conteudo__titulo {
+    text-align: center;
+}
+
+.conteudo__formulario input {
+    background-color: transparent;
+}
+.conteudo__formulario .selecao {
+    display: flex;
+    position: relative;
+}
+
+.selecao__rendimento {
+    position: relative;
+}
+
+.selecao__rendimento i {
+    position: absolute;
+    left: 92%;
+    cursor: pointer;
+}
+
+.selecao__indexacao {
+    position: absolute;
+    left: 20%;
+}
+
+.selecao__indexacao i {
+    position: absolute;
+    left: 92%;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+    position: relative; 
+}
+
+
+input[type="radio"] + label {
+    background: transparent;
+    color: var(--preto);
+    border-radius: 100px;
+    font-size: 32px;
+    cursor: pointer; 
+}
+
+input[type="radio"]:checked + label {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+input[type="radio"]:checked + label::before {
+    content: "\02714";
+}
+
+#bruto + label {
+    margin: 0;
+    border: 1px solid var(--preto);
+    border-radius: 5px 0px 0px 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#liquido + label {
+    margin: 0;
+    border: 1px solid var(--preto);
+    border-radius: 0px 5px 5px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#bruto:checked {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+#liquido:checked {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+#pre + label {
+    border: 1px solid var(--preto);
+    border-radius: 5px 0px 0px 5px;
+    padding: 10px 14.5px;
+    font-size: 16px;
+}
+
+#pos + label {
+    border: 1px solid var(--preto);
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px 14.5px;
+    font-size: 16px;
+}
+
+#fixo + label {
+    border: 1px solid var(--preto);
+    border-radius: 0px 5px 5px 0px;
+    padding: 10px 14.5px;
+    font-size: 16px;
+}
+
+#pre:checked {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+#pos:checked {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+#fixo:checked {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+.dados {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.dados__inicial-prazo {
+    display: flex;
+    flex-direction: column;
+    margin-top: .75rem;
+}
+
+.dados__inicial-prazo .aporte {
+    height: 41px;
+}
+
+.dados__inicial-prazo .erro {
+    height: 25px;
+    margin-top: 0.7rem;
+}
+
+.dados__inicial-prazo .periodo input{
+    margin-bottom: 0;
+}
+
+.dados__inicial-prazo .erro1 {
+    height: 25px;
+    margin-top: 0.3rem;
+}
+
+.dados__inicial-prazo .prazo {
+    margin-top: 3px;
+}
+
+.dados__inicial-prazo input {
+    margin-top: 15px;
+    margin-bottom: 0.4rem;
+    padding: 0.3rem;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--preto);
+    width: 178px;
+    font-size: 17px;
+}
+
+.dados__mensal-rent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 5%;
+    margin-top: 1.2rem;
+    width: 187px;
+}
+
+.dados__mensal-rent .mensal {
+    height: 41px;
+    margin-top: 3px;
+}
+
+.dados__mensal-rent .erro2 {
+    height: 36px;
+    margin-top: 0.8rem;
+}
+
+.dados__mensal-rent .erro3 {
+    height: 25px;
+    margin-top: 0.2rem;
+}
+
+.dados__mensal-rent .rent {
+    margin-top: 0.15rem;;
+}
+
+.dados__mensal-rent .rent input {
+    margin-bottom: 0;
+}
+
+.dados__mensal-rent input {
+    margin-top: 15px;
+    margin-bottom: 0.4rem;
+    padding: 0.3rem;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--preto);
+    width: 182px;
+    font-size: 17px;
+}
+
+.indicador {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.indicador__ipca {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--preto);
+    width: 187px;
+}
+
+.indicador__ipca-texto {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.indicador__ipca p {
+    margin-bottom: 10px;
+}
+
+.indicador__ipca-ano {
+    position: absolute;
+    left: 41px;
+}
+
+.indicador__cdi {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 20%;
+    width: 191px;
+    border-bottom: 1px solid var(--preto);
+
+}
+
+.indicador__cdi-texto {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.indicador__cdi p {
+    margin-bottom: 10px;
+}
+
+.indicador__cdi-ano {
+    position: absolute;
+    left: 32px;
+}
+
+.botoes {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.botao {
+    padding: 10px 5px;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.limpar {
+    background-color: transparent;
+}
+
+.simular {
+    position: absolute;
+    left: 18%;
+    background-color: var(--cinza-escuro);
+    border: none;
+}
+
+.simular-dados {
+    background-color: var(--laranja);
+    color: var(--preto);
+}
+
+.simular:hover {
+    background-color: var(--laranja);
+}
+
+.resultado {
+    position: absolute;
+    top: 100px;
+    left: 40%;
+}
+
+.resultado__subtitulo {
+    margin-top: 21px;
+    font-size: 25px;
+}
+
+.resultado__valores {
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;  
+    margin:0;           
+    padding:0;
+    height:50%; 
+}
+
+.resultado__valores li {
+    width: 26%;
+}
+
+.resultado-itens {
+    display:block;                             
+    list-style-type: none;                                    
+    margin:1rem;
+    padding:.7rem;                  
+    background-color: var(--branco-gelo);     
+    border: 2px solid var(--cinza-medio);
+    box-sizing: border-box;   
+    height:30%;           
+    text-align: center;
+}
+
+.resultado-itens:nth-child(4) span {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.resultado-itens:nth-child(6) span{
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.invalido-inicial {
+    display:block;
+    color: var(--vermelho);
+    font-size: 14px;
+}
+
+.invalido-prazo {
+    display:block;
+    color: var(--vermelho);
+    font-size: 14px;
+    margin: 0;
+}
+
+.invalido-mensal {
+    display:block;
+    color: var(--vermelho);
+    font-size: 14px;
+    width: 190px;
+}
+
+
+.invalido-rent {
+    display:block;
+    color: var(--vermelho);
+    font-size: 14px;
+    margin-top: .5px;
+    width: 230px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .conteudo {
+        height: 100%;
+        padding: 0;
+        padding-bottom: 32rem;
+    }
+    
+    .conteudo__titulo {
+        padding-top: 1rem;
+
+    }
+
+    .conteudo__subtitulo, .resultado__subtitulo {
+        display: none;
+    }
+
+    .selecao__rendimento {
+        margin: 0 auto;
+    }
+
+    .selecao__indexacao {
+        position: absolute;
+        top: 6rem;
+        left: 27%;
+    }
+
+    .dados {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 8rem;
+    }
+
+    .dados__inicial-prazo  {
+        margin-left: 3.5rem;
+    }
+
+    .dados__inicial-prazo  input {
+        margin-top: 9px;
+        width: 200px;
+    }
+
+    .dados__inicial-prazo  .periodo label {
+        margin-top: 13px;
+    }
+
+    .dados__mensal-rent {
+        left: 18%;
+        margin-top: 0;
+    }
+
+    .dados__mensal-rent input {
+        margin-top: 8px;
+        width: 205px;
+    }
+
+    .dados__mensal-rent .erro1 {
+        margin-top: 0.3rem;
+    }
+
+    .dados__mensal-rent .erro2 {
+        margin-left: 21px;
+        margin-top: 0.5rem;
+    }
+
+    .dados__mensal-rent .erro3 {
+        margin-left: 0;
+        margin-top: 0.3rem;
+    }
+
+    .indicador__ipca {
+        margin-left: 6.9rem;
+        width: 214px;
+    }
+
+    .indicador__ipca-ano {
+        left: 36%;
+    }
+
+    .indicador__cdi {
+        margin-top: 6rem;
+        left: 26%;
+        width: 214px;
+    }
+
+    .botoes {
+        margin-top: 8rem;
+    }
+
+    .limpar {
+        margin-left: 6.6rem;
+    }
+
+    .simular {
+        margin-top: 3rem;
+        margin-left: 1.9rem;
+    }
+
+    .resultado {
+        top: 65%;
+        left: 15%;
+    }
+
+    .resultado__valores {
+        left: -7%;
+        padding-top: 4.5rem;
+    }
+    
+    .resultado__valores li {
+        width: 40%;  
+    }
+
+    .resultado__valores li:nth-child(2) {
+        padding: 5%;
+    }
+
+    .resultado__valores li:nth-child(6) {
+        width: 40%;
+        padding: 4.9%;
+    }
+}
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/estilo.css">
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    
+    <title>Calculadora de Investimento</title>
+</head>
+<body onload="indicadores()">
+    <!--Conteúdo renderizado na tela-->
+    <main class="conteudo">
+        <h1 class="conteudo__titulo">Simulador de Investimento</h1>
+        <h2 class="conteudo__subtitulo">Simulador</h2>
+        <form class="conteudo__formulario">
+            <div class="conteudo__formulario selecao">
+
+                <div class="selecao__rendimento">
+                    <p>Rendimento <i class="las la-info-circle"></i></p>
+                    <input type="radio" name="opcao-rend" value="n" id="bruto" checked>
+                    <label for="bruto">Bruto</label>
+                    <input type="radio" name="opcao-rend" value="s" id="liquido" >
+                    <label for="liquido">Líquido</label>
+                    <br>
+                    <br>
+                </div>
+    
+                <div class="selecao__indexacao">
+                    <p>Tipos de Indexação <i class="las la-info-circle"></i></p>
+                    <input type="radio" name="opcao-indx" value="p" id="pre" checked>
+                    <label for="pre">Pré</label>
+                    <input type="radio" name="opcao-indx" value="ps" id="pos">
+                    <label for="pos">Pós</label>
+                    <input type="radio" name="opcao-indx" value="f" id="fixo">
+                    <label for="fixo">Fixo</label>
+                    
+                </div>
+            </div>
+            <div class="conteudo_formulario dados">
+                <div class="dados__inicial-prazo">
+                    <div class="dados__inicial-prazo aporte">
+                        <label id="label-inicial" for="aporte-inicial">Aporte Inicial</label>
+                        <input id="aporte-inicial" type="text"/>
+                    </div>
+                    <div class="dados__inicial-prazo erro">
+                        <p class="invalido-inicial" display="none"></p>
+                    </div>
+                    <div class="dados__inicial-prazo periodo">
+                        <label id="label-prazo" class="prazo" for="prazo">Prazo (em meses)</label>
+                        <input id="prazo" type="text"/>
+                    </div>
+                    <div class="dados__inicial-prazo erro1">
+                        <p class="invalido-prazo" display="none"></p>
+                    </div>
+                            
+                </div>
+
+                <div class="dados__mensal-rent">
+                    <div class="dados__mensal-rent mensal">
+                        <label id="label-mensal" for="aporte-mensal">Aporte Mensal</label>
+                        <input id="aporte-mensal" type="text"/>
+                    </div>
+                    <div class="dados__mensal-rent erro2">
+                        <p class="invalido-mensal" display="none"></p>
+                    </div>
+                    <div class="dados__mensal-rent rent">
+                        <label class="rent" id="label-rent" for="rent">Rentabilidade</label>
+                        <input id="rent" type="text"/>
+                    </div>
+                    <div class="dados__mensal-rent erro3">
+                        <p class="invalido-rent" display="none"></p>
+                    </div>
+                </div>
+                </div>
+                <div class="indicador" >
+                    <div class="indicador__ipca">
+                        <p class="indicador__ipca-texto"></p>
+                        <span class="indicador__ipca-ano"></span>
+                        <p class="indicador__ipca-numero"></p>
+                    </div>
+                    <div class="indicador__cdi">
+                        <p class="indicador__cdi-texto"></p>
+                        <span class="indicador__cdi-ano"></span>
+                        <p class="indicador__cdi-numero"></p>
+                    </div>
+                </div>
+                <div class="botoes">
+                    <button class="botao limpar" onclick="window.location.reload()">Limpar campos</button>
+                    <button type="submit" class="botao simular">Simular</button>
+                        
+                </div>
+                    
+            </div>
+        </form>
+        <div class="resultado">
+            <h2 class="resultado__subtitulo"></h2>
+            <ul class="resultado__valores">
+    
+            </ul>
+
+        </div>           
+        
+    </main>
+
+    <!--Parte dos scripts dos códigos-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xregexp/3.2.0/xregexp-all.min.js" integrity="sha512-EoQC7ZpFBwvZEbXQeelA6VpL75iUn484CsQX3qqOa27UmBMdFxsQ8ZwX1v0437BOND6fcuH+t/NL1DeQGKcyiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="index.js" ></script>
+    <script src="componentes/indicadores.js"></script>
+    <script src="componentes/inputPreenchido.js"></script>
+</body>
+
+</html>
